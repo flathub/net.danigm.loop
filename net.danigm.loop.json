@@ -73,6 +73,45 @@
           ]
         },
         {
+            "name" : "fluidsynth",
+            "buildsystem" : "cmake",
+            "config-opts": [
+                "-DLIB_SUFFIX="
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url" : "https://github.com/FluidSynth/fluidsynth.git",
+                    "branch" : "v2.2.4"
+                }
+            ]
+        },
+        {
+            "name" : "python3_midi",
+            "buildsystem" : "simple",
+            "build-commands" : [
+                "pip3 install --prefix=/app --no-deps ."
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://files.pythonhosted.org/packages/7b/e1/8a1f3f1ab4d7b7205ba8c00f86d4a5fb042b2c1f285257bd9545665470cb/python3_midi-0.2.5.tar.gz",
+                    "sha256" : "4e1f6b9c3d00363decd98b0497cb72ce1a59772e15d77ed9847dd85b0f0f32fd"
+                }
+            ]
+        },
+        {
+            "name" : "gstreamer-plugins-bad",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git",
+                    "tag" : "1.18.6"
+                }
+            ]
+        },
+        {
             "name" : "loop",
             "builddir" : true,
             "buildsystem" : "meson",
@@ -80,8 +119,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/danigm/loop.git",
-                    "commit" : "48109f3875cd5ae10b7646aa0800b2c33f60c024",
-                    "tag" : "v0.1.0"
+                    "commit" : "ed6d8daafb1f78ddc5e9def890bb37de448fa837",
+                    "tag" : "v1.0.0"
                 }
             ]
         }
