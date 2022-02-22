@@ -119,7 +119,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/danigm/loop.git",
-                    "commit" : "c96ef3868173bba126096dd5058d1d3c17128cc6"
+                    "commit" : "c96ef3868173bba126096dd5058d1d3c17128cc6",
+                    "tag" : "v1.0.1"
                 }
             ]
         }
