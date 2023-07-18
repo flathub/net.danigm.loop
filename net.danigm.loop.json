@@ -1,7 +1,7 @@
 {
     "app-id" : "net.danigm.loop",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "41",
+    "runtime-version" : "44",
     "sdk" : "org.gnome.Sdk",
     "command" : "loop",
     "finish-args" : [
@@ -82,7 +82,8 @@
                 {
                     "type": "git",
                     "url" : "https://github.com/FluidSynth/fluidsynth.git",
-                    "branch" : "v2.2.4"
+                    "tag" : "v2.2.4",
+                    "commit": "6c807bdd37748411801e93c48fcd5789d5a6a278"
                 }
             ]
         },
