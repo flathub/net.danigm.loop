@@ -1,0 +1,59 @@
+From 348ef6d36f7059a13fde881dc081f086ed4f83d5 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Tue, 4 Jun 2024 23:15:49 +0300
+Subject: [PATCH] appdata: Update appdata
+
+Fix some papercuts
+---
+ data/net.danigm.loop.appdata.xml.in | 11 +++++++----
+ data/net.danigm.loop.desktop.in     |  2 +-
+ 2 files changed, 8 insertions(+), 5 deletions(-)
+
+diff --git a/data/net.danigm.loop.appdata.xml.in b/data/net.danigm.loop.appdata.xml.in
+index 047ac6e..83757da 100644
+--- a/data/net.danigm.loop.appdata.xml.in
++++ b/data/net.danigm.loop.appdata.xml.in
+@@ -4,13 +4,15 @@
+     <name>Loop</name>
+     <metadata_license>CC0-1.0</metadata_license>
+     <project_license>GPL-3.0-or-later</project_license>
+-    <summary>A simple audio loop machind for GNOME</summary>
++    <summary>A simple audio loop machine for GNOME</summary>
+     <url type="homepage">https://gitlab.gnome.org/danigm/loop</url>
++    <url type="bugtracker">https://gitlab.gnome.org/danigm/loop/-/issues</url>
++    <url type="vcs-browser">https://gitlab.gnome.org/danigm/loop</url>
+     <description>
+         <p>Simple audio loop machine application to create music</p>
+     </description>
+     <screenshots>
+-        <screenshot>
++        <screenshot type="default">
+           <image>https://gitlab.gnome.org/danigm/loop/raw/main/screenshots/loop01.png</image>
+         </screenshot>
+         <screenshot>
+@@ -23,8 +25,9 @@
+           <image>https://gitlab.gnome.org/danigm/loop/raw/main/screenshots/loop04.png</image>
+         </screenshot>
+     </screenshots>
+-
+-    <content_rating type="oars-1.0" />
++    <developer_name>Daniel Garcia Moreno</developer_name>
++    <launchable type="desktop-id">net.danigm.loop.desktop</launchable>
++    <content_rating type="oars-1.1" />
+     <releases>
+         <release version="1.0.1" date="2022-02-22">
+             <description>
+diff --git a/data/net.danigm.loop.desktop.in b/data/net.danigm.loop.desktop.in
+index ed2b0a1..006e8de 100644
+--- a/data/net.danigm.loop.desktop.in
++++ b/data/net.danigm.loop.desktop.in
+@@ -4,5 +4,5 @@ Exec=loop
+ Icon=net.danigm.loop
+ Terminal=false
+ Type=Application
+-Categories=GTK;
++Categories=Music;GTK;
+ StartupNotify=true
+--
+libgit2 1.7.2
+
