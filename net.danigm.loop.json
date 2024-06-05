@@ -1,7 +1,7 @@
 {
     "app-id" : "net.danigm.loop",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "loop",
     "finish-args" : [
@@ -20,73 +20,13 @@
         "/share/gtk-doc",
         "/share/man",
         "/share/pkgconfig",
+        "/lib/girepository-1.0",
+        "/lib/gstreamer-1.0",
         "*.la",
         "*.a"
     ],
     "modules" : [
-        {
-          "name": "libadwaita",
-          "buildsystem": "meson",
-          "cleanup": [
-              "/include",
-              "/lib/pkgconfig"
-          ],
-          "config-opts": [
-              "-Dgtk_doc=false",
-              "-Dtests=false",
-              "-Dexamples=false",
-              "-Dvapi=false"
-          ],
-          "sources": [
-              {
-                  "type": "git",
-                  "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                  "tag" : "1.0.0.alpha.4",
-                  "commit" : "6b447fde8f270001a0dc29ef59d3e9bf6d32dae9"
-              }
-          ],
-          "modules" : [
-              {
-                  "name" : "libsass",
-                  "buildsystem" : "meson",
-                  "cleanup": ["*"],
-                  "sources" : [
-                      {
-                          "type" : "git",
-                          "url" : "https://github.com/lazka/libsass.git",
-                          "commit" : "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-                      }
-                  ]
-              },
-              {
-                  "name" : "sassc",
-                  "buildsystem" : "meson",
-                  "cleanup": ["*"],
-                  "sources" : [
-                      {
-                          "type" : "git",
-                          "url" : "https://github.com/lazka/sassc.git",
-                          "commit" : "82803377c33247265d779af034eceb5949e78354"
-                      }
-                  ]
-              }
-          ]
-        },
-        {
-            "name" : "fluidsynth",
-            "buildsystem" : "cmake",
-            "config-opts": [
-                "-DLIB_SUFFIX="
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url" : "https://github.com/FluidSynth/fluidsynth.git",
-                    "tag" : "v2.2.4",
-                    "commit": "6c807bdd37748411801e93c48fcd5789d5a6a278"
-                }
-            ]
-        },
+        "shared-modules/linux-audio/fluidsynth2.json",
         {
             "name" : "python3_midi",
             "buildsystem" : "simple",
@@ -122,6 +62,10 @@
                     "url" : "https://gitlab.gnome.org/danigm/loop.git",
                     "commit" : "c96ef3868173bba126096dd5058d1d3c17128cc6",
                     "tag" : "v1.0.1"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "fix_appdata.patch"
                 }
             ]
         }
