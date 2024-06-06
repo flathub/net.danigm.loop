@@ -21,7 +21,6 @@
         "/share/man",
         "/share/pkgconfig",
         "/lib/girepository-1.0",
-        "/lib/gstreamer-1.0",
         "*.la",
         "*.a"
     ],
