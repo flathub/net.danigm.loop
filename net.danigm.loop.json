@@ -1,7 +1,7 @@
 {
     "app-id" : "net.danigm.loop",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
     "command" : "loop",
     "finish-args" : [
@@ -59,12 +59,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/danigm/loop.git",
-                    "commit" : "c96ef3868173bba126096dd5058d1d3c17128cc6",
-                    "tag" : "v1.0.1"
-                },
-                {
-                    "type" : "patch",
-                    "path" : "fix_appdata.patch"
+                    "commit" : "8ea802c7bcd7dd7c2f802403f946b5d282fe0d00",
+                    "tag" : "v1.0.2"
                 }
             ]
         }
