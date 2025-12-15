@@ -1,7 +1,7 @@
 {
     "app-id" : "net.danigm.loop",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "49",
     "sdk" : "org.gnome.Sdk",
     "command" : "loop",
     "finish-args" : [
@@ -30,7 +30,7 @@
             "name" : "python3_midi",
             "buildsystem" : "simple",
             "build-commands" : [
-                "pip3 install --prefix=/app --no-deps ."
+                "pip3 install --no-build-isolation --prefix=/app --no-deps ."
             ],
             "sources" : [
                 {
@@ -47,7 +47,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git",
-                    "tag" : "1.18.6"
+                    "tag" : "1.19.2"
                 }
             ]
         },
@@ -59,12 +59,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/danigm/loop.git",
-                    "commit" : "c96ef3868173bba126096dd5058d1d3c17128cc6",
-                    "tag" : "v1.0.1"
-                },
-                {
-                    "type" : "patch",
-                    "path" : "fix_appdata.patch"
+                    "commit" : "8ea802c7bcd7dd7c2f802403f946b5d282fe0d00",
+                    "tag" : "v1.0.2"
                 }
             ]
         }
